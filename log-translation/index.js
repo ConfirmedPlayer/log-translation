@@ -21,7 +21,6 @@ Description=Log translation service
 Type=simple
 ExecStart=/usr/bin/node ${__filename}
 Restart=always
-RestartSec=10
 User=root
 
 [Install]
@@ -70,12 +69,13 @@ function registerService()
   if (!fs.existsSync(path))
   {
     fs.writeFileSync(path, systemdService);
-    execSync('systemctl daemon-reload');
-    execSync('systemctl enable log-translation');
-    execSync('systemctl start log-translation');
+    execSync('sudo systemctl daemon-reload');
+    execSync('sudo systemctl enable log-translation');
+    execSync('sudo systemctl start log-translation');
   
-    console.log('Service successfully registered');
+    console.log('Сервис зарегистрирован');
   }
+  console.log('Пожалуйста, закройте программу, если она запущена не как сервис systemd');
 }
 
 
