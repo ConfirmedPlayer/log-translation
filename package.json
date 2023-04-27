@@ -1,0 +1,15 @@
+{
+  "name": "log-translation",
+  "version": "1.0.0",
+  "main": "index.js",
+  "repository": "https://github.com/ConfirmedPlayer/log-translation.git",
+  "author": "Confi <confirmedplayer@mail.ru>",
+  "license": "MIT",
+  "dependencies": {
+    "child_process": "^1.0.2",
+    "chokidar": "^3.5.3",
+    "fs": "^0.0.1-security",
+    "js-yaml": "^4.1.0",
+    "path": "^0.12.7"
+  }
+}
